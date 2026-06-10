@@ -10,6 +10,8 @@ import com.tarifa.entity.FaixaConsumo;
 @Repository
 public interface FaixaConsumoRepository extends JpaRepository<FaixaConsumo, Long> {
 	
-	List<FaixaConsumo> findByCategoriaTarifariaIdOrderByInicioAsc(Long id);
+	List<FaixaConsumo>
+	findByCategoriaTarifariaIdOrderByInicioAsc(
+            Long categoriaId);
 
 }
