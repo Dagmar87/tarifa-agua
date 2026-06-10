@@ -11,4 +11,20 @@ public class TabelaTarifariaDTO {
 
     private List<CategoriaDTO> categorias;
 
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public List<CategoriaDTO> getCategorias() {
+		return categorias;
+	}
+
+	public void setCategorias(List<CategoriaDTO> categorias) {
+		this.categorias = categorias;
+	}    
+
 }

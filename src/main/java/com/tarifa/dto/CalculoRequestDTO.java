@@ -11,4 +11,20 @@ public class CalculoRequestDTO {
 	
 	private Integer consumo;
 
+	public CategoriaConsumidor getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(CategoriaConsumidor categoria) {
+		this.categoria = categoria;
+	}
+
+	public Integer getConsumo() {
+		return consumo;
+	}
+
+	public void setConsumo(Integer consumo) {
+		this.consumo = consumo;
+	}	
+
 }
