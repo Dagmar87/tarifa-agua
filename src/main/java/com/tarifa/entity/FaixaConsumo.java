@@ -6,29 +6,31 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "faixa_consumo")
 @Getter
 @Setter
+@Table(name = "faixa_consumo")
 public class FaixaConsumo {
-	
-	@Id
+
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-	
-	private Integer inicio;
-	
-	private Integer fim;
-	
-	private BigDecimal valorUnitario;
-	
-	@ManyToOne
-	private CategoriaTarifaria categoriaTarifaria;
+    private Long id;
+
+    private Integer inicio;
+
+    private Integer fim;
+
+    private BigDecimal valorUnitario;
+
+    @ManyToOne
+    @JoinColumn(name = "categoria_tarifaria_id")
+    private CategoriaTarifaria categoriaTarifaria;
 
 	public Long getId() {
 		return id;
@@ -68,6 +70,6 @@ public class FaixaConsumo {
 
 	public void setCategoriaTarifaria(CategoriaTarifaria categoriaTarifaria) {
 		this.categoriaTarifaria = categoriaTarifaria;
-	}	
-
+	}    
+    
 }
