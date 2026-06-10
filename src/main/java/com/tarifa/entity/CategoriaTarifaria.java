@@ -29,4 +29,28 @@ public class CategoriaTarifaria {
 	@ManyToOne
 	private TabelaTarifaria tabela;
 
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public CategoriaConsumidor getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(CategoriaConsumidor categoria) {
+		this.categoria = categoria;
+	}
+
+	public TabelaTarifaria getTabela() {
+		return tabela;
+	}
+
+	public void setTabela(TabelaTarifaria tabela) {
+		this.tabela = tabela;
+	}	
+
 }

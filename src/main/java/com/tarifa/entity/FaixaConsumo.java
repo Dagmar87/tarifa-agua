@@ -30,4 +30,44 @@ public class FaixaConsumo {
 	@ManyToOne
 	private CategoriaTarifaria categoriaTarifaria;
 
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public Integer getInicio() {
+		return inicio;
+	}
+
+	public void setInicio(Integer inicio) {
+		this.inicio = inicio;
+	}
+
+	public Integer getFim() {
+		return fim;
+	}
+
+	public void setFim(Integer fim) {
+		this.fim = fim;
+	}
+
+	public BigDecimal getValorUnitario() {
+		return valorUnitario;
+	}
+
+	public void setValorUnitario(BigDecimal valorUnitario) {
+		this.valorUnitario = valorUnitario;
+	}
+
+	public CategoriaTarifaria getCategoriaTarifaria() {
+		return categoriaTarifaria;
+	}
+
+	public void setCategoriaTarifaria(CategoriaTarifaria categoriaTarifaria) {
+		this.categoriaTarifaria = categoriaTarifaria;
+	}	
+
 }
