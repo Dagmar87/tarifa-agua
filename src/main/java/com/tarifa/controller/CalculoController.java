@@ -11,17 +11,26 @@ import com.tarifa.dto.CalculoRequestDTO;
 import com.tarifa.dto.CalculoResponseDTO;
 import com.tarifa.service.CalculoService;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequestMapping("/api/calculos")
 @RequiredArgsConstructor
+@Tag(
+        name = "Cálculo",
+        description = "Operações de cálculo de consumo")
 public class CalculoController {
 	
 	@Autowired
 	private CalculoService service;
 	
 	@PostMapping
+	@Operation(
+            summary = "Calcular conta",
+            description =
+                    "Calcula o valor da conta de água")
     public ResponseEntity<CalculoResponseDTO>
     calcular(@RequestBody CalculoRequestDTO dto) {
 
